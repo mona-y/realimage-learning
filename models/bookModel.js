@@ -1,0 +1,15 @@
+var mongoose= require('mongoose');
+ var Schema= mongoose.Schema;
+
+
+var bookModel = new Schema({
+	title: {
+		type: String
+	},
+	author: {type: String},
+	genre: {type: String},
+	read: {type: Boolean, default:false}
+});
+
+module.exports= mongoose.model('Book',bookModel);
+//tells mongoose that we have a nodel called bookmodel
